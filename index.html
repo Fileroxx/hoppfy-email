@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="shortcut icon" href="assets/icon-min.png" type="image/x-icon">
-        <!-- Meta Pixel Code -->
+    <script src="js/cookies.js"></script>    
+    
+    <!-- Meta Pixel Code -->
         <script>
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -33,6 +35,7 @@
           gtag("js", new Date());
           gtag("config", "UA-235400495-1");
         </script>
+
 </head>
 <body>
 
@@ -107,10 +110,65 @@
 
           </div>
 
+          <div class="cookies-container">
+            <div class="cookies-content">
+                <p>
+                  Utilizamos cookies para oferecer melhor experiência, melhorar o desempenho, 
+                  analisar como você interage em nosso site e gravar informações coletadas 
+                  por meio de formulários. Ao utilizar esse site, você concorda com o uso de cookies. 
+                  Para mais informações visite Política de Privacidade.
+                  Você aceita o uso de cookies?
+                </p>
+
+                <div class="cookies-save">
+                  <button class="btn-cookies">aceitar cookies</button>
+                </div>
+
+            </div>
+          </div>
+
     </header>
 
-
     <script>
+
+
+setCookie = (cName, cValue, expDays) => {
+    let date = new Date();
+    date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + dat.toUTCString();   
+    document.cookie = cName + '=' + cValue + '; ' + expires + '; path=/,';
+}
+
+
+getCookie = (cName) => {
+    const name = cName + "="
+    const cDecoded = decodeURIComponent(document.cookie);
+    const cArr = cDecoded.split("; ");
+    let value;
+    cArr.forEach(val => {
+        if(val.indexOf(name) === 0) {
+          value = val.substring(name.length)
+        }
+    })
+
+    return value
+
+}
+
+document.querySelector(".cookies-save .btn-cookies").addEventListener('click', () => {
+    document.querySelector(".cookies-container").style.display = 'none';
+    setCookie("cookie", true, 30)
+})
+
+
+cookieMessage = () => {
+    if (!getCookie("cookie"))
+        document.querySelector('.cookies-container').style.display = "block"
+}
+
+window.addEventListener('load', cookieMessage);
+
+
         window.cfields = [];
         window._show_thank_you = function (id, message, trackcmp_url, email) {
           var form = document.getElementById("_form_" + id + "_"),
@@ -170,26 +228,7 @@
           head.appendChild(script);
         };
         (function () {
-          if (window.location.search.search("excludeform") !== -1) return false;
-          var getCookie = function (name) {
-            var match = document.cookie.match(
-              new RegExp("(^|; )" + name + "=([^;]+)")
-            );
-            return match ? match[2] : null;
-          };
-          var setCookie = function (name, value) {
-            var now = new Date();
-            var time = now.getTime();
-            var expireTime = time + 1000 * 60 * 60 * 24 * 365;
-            now.setTime(expireTime);
-            document.cookie =
-              name +
-              "=" +
-              value +
-              "; expires=" +
-              now +
-              ";path=/; Secure; SameSite=Lax;"; // cannot be HttpOnly
-          };
+
           var addEvent = function (element, event, func) {
             if (element.addEventListener) {
               element.addEventListener(event, func);
