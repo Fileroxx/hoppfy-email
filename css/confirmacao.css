@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {  
+    background: linear-gradient(359.82deg, #110E2E 38.95%, #350751 90.82%); 
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100% !important; 
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    
+}
+
+.logo {
+    padding-bottom: 4rem;
+}
+
+.logo img {
+    width: 8%;
+}
+
+
+
+
+
+h1 {
+    font-size: 2.5rem;
+    width: 35%;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+form {
+    width: 30% !important;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 2rem;
+}
+
+form input {
+    width: 100% !important;
+    padding: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    color: #110E2E;
+    font-size: 1rem;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 1.3rem;
+    width: 25%;
+    padding-top: 2rem;
+    margin: 0 auto;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background: #01DE74;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease-in all;
+    border: 0;
+    outline: 0;
+}
+
+.instagram {
+    width: 30%;
+    margin-top: 2rem;
+}
+
+button:hover {
+    opacity: .6;
+}
+
+.aceitar {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.aceitar input {
+    width: 60px;
+    height: 60px;
+}
+
+
+.aceitar label {
+    text-align: left;
+    padding-left: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.copyright {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.cookies-container {
+    background: #fff;
+    color: #161616;
+    text-align: left;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 25%;
+    position: fixed;
+    bottom: 10px;
+    transition: all ease-in .6s;
+    right: 10px;
+   
+}
+
+.confirmar {
+    padding-top: 4rem !important;
+}
+
+.confirmar button {
+    background: #011fde;
+    border-radius: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    iframe {
+        width: 90%;
+        height: 200px;
+    }
+
+    .logo img {
+        width: 30%;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    h4 {
+        width: 100%;
+    }
+
+    form {
+        width: 90% !important;
+    }
+
+    form input {
+        width: 100%;
+    }
+    
+    .aceitar {
+        width: 90%;
+    }
+
+    .confirmar h3 {
+        padding-top: 2rem;
+    }
+
+
+}
+
+
