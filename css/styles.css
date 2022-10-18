@@ -172,3 +172,7 @@ button:hover {
 }
 
 
+.redes-sociais .icons a {
+    text-decoration: none;
+    color: #fff;
+}

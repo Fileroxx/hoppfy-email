@@ -38,6 +38,7 @@ h1 {
     width: 35%;
     margin: 0 auto;
     font-weight: 500;
+    padding-top: 2rem;
 }
 
 iframe {
@@ -84,7 +85,10 @@ button {
     transition: .3s ease-in all;
     border: 0;
     outline: 0;
+
 }
+
+
 
 .instagram {
     width: 30%;
@@ -137,8 +141,13 @@ button:hover {
 }
 
 
+i {
+    transition: all ease-in .3s;
 
-
+}
+i:hover {
+    transform: scale(1.05);
+}
 
 @media screen and (max-width: 767px) {
     iframe {
@@ -171,5 +180,6 @@ button:hover {
         width: 90%;
     }
 }
+
 
 
